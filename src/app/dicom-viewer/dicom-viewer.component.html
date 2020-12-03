@@ -1,0 +1,16 @@
+<div>
+    <div #mainDisplay id="mainDisplay"> 
+    </div>
+    <div id="tools">
+        <div *ngFor="let tool of tools">
+            <input type="radio" name="tools" value="{{tool}}" (change)=onToolChanged($event)>
+            <label>{{ tool }}</label> 
+        </div>
+    </div>
+
+    <div id="thumbnailContainer">
+        <div *ngFor="let name of imagesNames">
+            <app-thumbnail [imageName]=name></app-thumbnail>
+        </div>
+    </div>
+</div>
